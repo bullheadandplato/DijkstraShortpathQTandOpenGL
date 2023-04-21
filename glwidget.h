@@ -2,12 +2,12 @@
 #ifndef GLWIDGET_H
 #define GLWIDGET_H
 
-#include <QtOpenGL/QGLWidget>
+#include <QOpenGLWidget>
 #include "ui_glwidget.h"
 #include "OsamaDistance.h"
 size_t static xp;
 size_t static  yp;
-class GLWidget : public QGLWidget
+class GLWidget : public QOpenGLWidget
 {
 public:
     void setPoints(size_t x, size_t y);

@@ -6,10 +6,9 @@
 
 QT       += core gui
 CONFIG += c++11
+QT += openglwidgets
 QT += opengl
-
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT += widgets
 
 TARGET = untitled5
 TEMPLATE = app

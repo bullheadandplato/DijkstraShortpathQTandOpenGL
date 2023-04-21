@@ -7,7 +7,7 @@ Osama::Osama(QWidget *parent, Qt::WindowFlags flags)
 	: QMainWindow(parent, flags)
 {
 	ui.setupUi(this);
-	ui.horizontalScrollBar->setRange(0, GLWidget::MATRIX_SIZE * GLWidget::MATRIX_SIZE);
+    //ui.horizontalScrollBar->setRange(0, GLWidget::MATRIX_SIZE * GLWidget::MATRIX_SIZE);
 }
 
 Osama::~Osama()

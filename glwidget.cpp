@@ -4,7 +4,7 @@
 #include<iostream>
 
 GLWidget::GLWidget(QWidget *parent)
-    : QGLWidget(parent), mWallsNumber(0)
+    : QOpenGLWidget(parent), mWallsNumber(0)
 {
 
 
@@ -76,8 +76,10 @@ void GLWidget::ShowWalls() const
 void GLWidget::ShowPath( size_t x,size_t y)
 {
 
-	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    qglColor(Qt::green);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+
+    glColor3f(0.0,1.0,0.0);
+    //qglColor(Qt::green);
 
 	PaintQuad(x, y);
 	while(x != 0 || y != 0) 
@@ -167,7 +169,8 @@ void GLWidget::initializeGL()
 	glOrtho(-1.2f, 1.2f, -1.2f, 1.2f, -1.2f, 1.2f);
 
     glTranslatef(-1.0f, -1.0f, 0.0f);
-    qglClearColor(Qt::gray);
+    glColor3f(0.1,0.1,0.1);
+    //qglClearColor(Qt::gray);
 
     glRotated(45, 1, 1, 0);
 }
